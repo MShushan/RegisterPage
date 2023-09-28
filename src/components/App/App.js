@@ -1,9 +1,17 @@
-import NavScrollExample from '../Header/Header'
+import ColumnStyle from "../ColumnStyle"
+import ComparePlans from "../ComparePlans"
+import Template from "./TemplateText"
+
+
 
 function App() {
   
   return(
-    <NavScrollExample/>
+    <div>
+      <Template/>
+      <ColumnStyle/>
+      <ComparePlans/>
+    </div>
   )
 }
  
