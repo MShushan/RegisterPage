@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import HeaderDone from '../Header';
 import NewsCardDone from '../NewsCard';
+import UserCardDone from '../UserCard';
 
 
 import { Container, Row } from 'react-bootstrap'
@@ -11,13 +12,13 @@ function App() {
       id: 0,
       title: "Card Title",
       text: "Some quick example text to build on the card title and make up the bulk of the cards content.",
-      picture: '/images/1.jpg',
+      picture: '/images/3.jpg',
     },
     {
       id: 1,
       title: "Card Title",
       text: "Some quick example text to build on the card title and make up the bulk of the cards content.",
-      picture: '/images/2.jpg',
+      picture: '/images/3.jpg',
 
     },
     {
@@ -31,7 +32,7 @@ function App() {
       id: 3,
       title: "Card Title",
       text: "Some quick example text to build on the card title and make up the bulk of the cards content.",
-      picture: '/images/4.jpg',
+      picture: '/images/3.jpg',
 
     },
   ]
@@ -51,7 +52,7 @@ function App() {
         <Row>
           {
             cardInfoArr.map((val) => {
-              return <NewsCardDone />
+              return <NewsCardDone info={val} />
             })
 
           }
@@ -60,6 +61,10 @@ function App() {
 
         </Row>
 
+      </Container>
+
+      <Container className='mb-5'>
+        <UserCardDone/>
       </Container>
 
       <Container fluid className='bg-dark text-white p-3 text-center'>
